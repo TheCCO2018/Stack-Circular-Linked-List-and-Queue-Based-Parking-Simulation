@@ -46,24 +46,24 @@
             this.ilistBasement = new System.Windows.Forms.ImageList(this.components);
             this.ilistSecondFlat = new System.Windows.Forms.ImageList(this.components);
             this.pnlTest = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuImageButton7 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lblCompName = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblOS = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblRam = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblCpuName = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblOneQuantity = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblQuantity = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblFiveSecs = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblOneTime = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTestHead = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblFiveMins = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblQuantity = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblOS = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblRam = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblCpuName = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblCompName = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton7 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnlManual = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnEmptyNotification = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnTest = new Bunifu.Framework.UI.BunifuImageButton();
@@ -82,20 +82,24 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblManualHead = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pnlLoading = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pbLoading = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlWelcome.SuspendLayout();
             this.pnlControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlTest.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             this.pnlManual.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.pnlLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlWelcome
@@ -295,6 +299,7 @@
             // 
             this.pnlTest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTest.BackgroundImage")));
             this.pnlTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTest.Controls.Add(this.pnlLoading);
             this.pnlTest.Controls.Add(this.bunifuImageButton7);
             this.pnlTest.Controls.Add(this.bunifuImageButton6);
             this.pnlTest.Controls.Add(this.bunifuImageButton5);
@@ -304,10 +309,10 @@
             this.pnlTest.Controls.Add(this.lblRam);
             this.pnlTest.Controls.Add(this.lblCpuName);
             this.pnlTest.Controls.Add(this.bunifuCustomLabel8);
-            this.pnlTest.Controls.Add(this.bunifuCustomLabel6);
+            this.pnlTest.Controls.Add(this.lblOneQuantity);
             this.pnlTest.Controls.Add(this.bunifuCustomLabel9);
             this.pnlTest.Controls.Add(this.lblQuantity);
-            this.pnlTest.Controls.Add(this.lblFiveMins);
+            this.pnlTest.Controls.Add(this.lblFiveSecs);
             this.pnlTest.Controls.Add(this.lblOneTime);
             this.pnlTest.Controls.Add(this.bunifuCustomLabel7);
             this.pnlTest.Controls.Add(this.bunifuCustomLabel5);
@@ -322,6 +327,156 @@
             this.pnlTest.Quality = 10;
             this.pnlTest.Size = new System.Drawing.Size(800, 475);
             this.pnlTest.TabIndex = 14;
+            // 
+            // bunifuImageButton7
+            // 
+            this.bunifuImageButton7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton7.Enabled = false;
+            this.bunifuImageButton7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.Image")));
+            this.bunifuImageButton7.ImageActive = null;
+            this.bunifuImageButton7.Location = new System.Drawing.Point(25, 420);
+            this.bunifuImageButton7.Name = "bunifuImageButton7";
+            this.bunifuImageButton7.Size = new System.Drawing.Size(42, 42);
+            this.bunifuImageButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton7.TabIndex = 25;
+            this.bunifuImageButton7.TabStop = false;
+            this.bunifuImageButton7.Zoom = 10;
+            // 
+            // bunifuImageButton6
+            // 
+            this.bunifuImageButton6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton6.Enabled = false;
+            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
+            this.bunifuImageButton6.ImageActive = null;
+            this.bunifuImageButton6.Location = new System.Drawing.Point(25, 378);
+            this.bunifuImageButton6.Name = "bunifuImageButton6";
+            this.bunifuImageButton6.Size = new System.Drawing.Size(42, 42);
+            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton6.TabIndex = 24;
+            this.bunifuImageButton6.TabStop = false;
+            this.bunifuImageButton6.Zoom = 10;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton5.Enabled = false;
+            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(25, 338);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(42, 42);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 23;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton4.Enabled = false;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(25, 296);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(42, 42);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 22;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            // 
+            // lblCompName
+            // 
+            this.lblCompName.AutoSize = true;
+            this.lblCompName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCompName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCompName.Location = new System.Drawing.Point(70, 303);
+            this.lblCompName.Name = "lblCompName";
+            this.lblCompName.Size = new System.Drawing.Size(0, 30);
+            this.lblCompName.TabIndex = 21;
+            // 
+            // lblOS
+            // 
+            this.lblOS.AutoSize = true;
+            this.lblOS.BackColor = System.Drawing.Color.Transparent;
+            this.lblOS.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOS.Location = new System.Drawing.Point(70, 425);
+            this.lblOS.Name = "lblOS";
+            this.lblOS.Size = new System.Drawing.Size(0, 30);
+            this.lblOS.TabIndex = 20;
+            // 
+            // lblRam
+            // 
+            this.lblRam.AutoSize = true;
+            this.lblRam.BackColor = System.Drawing.Color.Transparent;
+            this.lblRam.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRam.Location = new System.Drawing.Point(70, 383);
+            this.lblRam.Name = "lblRam";
+            this.lblRam.Size = new System.Drawing.Size(0, 30);
+            this.lblRam.TabIndex = 19;
+            // 
+            // lblCpuName
+            // 
+            this.lblCpuName.AutoSize = true;
+            this.lblCpuName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCpuName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCpuName.Location = new System.Drawing.Point(70, 343);
+            this.lblCpuName.Name = "lblCpuName";
+            this.lblCpuName.Size = new System.Drawing.Size(0, 30);
+            this.lblCpuName.TabIndex = 18;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(15, 257);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(263, 37);
+            this.bunifuCustomLabel8.TabIndex = 13;
+            this.bunifuCustomLabel8.Text = "System Informations:";
+            // 
+            // lblOneQuantity
+            // 
+            this.lblOneQuantity.AutoSize = true;
+            this.lblOneQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lblOneQuantity.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOneQuantity.Location = new System.Drawing.Point(564, 119);
+            this.lblOneQuantity.Name = "lblOneQuantity";
+            this.lblOneQuantity.Size = new System.Drawing.Size(0, 37);
+            this.lblOneQuantity.TabIndex = 12;
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(529, 76);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(119, 37);
+            this.bunifuCustomLabel9.TabIndex = 11;
+            this.bunifuCustomLabel9.Text = "Quantity";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblQuantity.Location = new System.Drawing.Point(550, 170);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(0, 37);
+            this.lblQuantity.TabIndex = 10;
+            // 
+            // lblFiveSecs
+            // 
+            this.lblFiveSecs.AutoSize = true;
+            this.lblFiveSecs.BackColor = System.Drawing.Color.Transparent;
+            this.lblFiveSecs.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFiveSecs.ForeColor = System.Drawing.Color.Lime;
+            this.lblFiveSecs.Location = new System.Drawing.Point(348, 173);
+            this.lblFiveSecs.Name = "lblFiveSecs";
+            this.lblFiveSecs.Size = new System.Drawing.Size(24, 37);
+            this.lblFiveSecs.TabIndex = 8;
+            this.lblFiveSecs.Text = " ";
             // 
             // lblOneTime
             // 
@@ -378,162 +533,6 @@
             this.lblTestHead.Size = new System.Drawing.Size(266, 37);
             this.lblTestHead.TabIndex = 1;
             this.lblTestHead.Text = "Automated Autopark";
-            // 
-            // lblFiveMins
-            // 
-            this.lblFiveMins.AutoSize = true;
-            this.lblFiveMins.BackColor = System.Drawing.Color.Transparent;
-            this.lblFiveMins.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFiveMins.ForeColor = System.Drawing.Color.Lime;
-            this.lblFiveMins.Location = new System.Drawing.Point(329, 173);
-            this.lblFiveMins.Name = "lblFiveMins";
-            this.lblFiveMins.Size = new System.Drawing.Size(24, 37);
-            this.lblFiveMins.TabIndex = 8;
-            this.lblFiveMins.Text = " ";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblQuantity.Location = new System.Drawing.Point(550, 170);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(59, 37);
-            this.lblQuantity.TabIndex = 10;
-            this.lblQuantity.Text = "10x";
-            // 
-            // bunifuCustomLabel9
-            // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(529, 76);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(119, 37);
-            this.bunifuCustomLabel9.TabIndex = 11;
-            this.bunifuCustomLabel9.Text = "Quantity";
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(564, 119);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(44, 37);
-            this.bunifuCustomLabel6.TabIndex = 12;
-            this.bunifuCustomLabel6.Text = "1x";
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(15, 257);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(263, 37);
-            this.bunifuCustomLabel8.TabIndex = 13;
-            this.bunifuCustomLabel8.Text = "System Informations:";
-            // 
-            // lblOS
-            // 
-            this.lblOS.AutoSize = true;
-            this.lblOS.BackColor = System.Drawing.Color.Transparent;
-            this.lblOS.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOS.Location = new System.Drawing.Point(70, 425);
-            this.lblOS.Name = "lblOS";
-            this.lblOS.Size = new System.Drawing.Size(207, 30);
-            this.lblOS.TabIndex = 20;
-            this.lblOS.Text = "System Informations:";
-            // 
-            // lblRam
-            // 
-            this.lblRam.AutoSize = true;
-            this.lblRam.BackColor = System.Drawing.Color.Transparent;
-            this.lblRam.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblRam.Location = new System.Drawing.Point(70, 383);
-            this.lblRam.Name = "lblRam";
-            this.lblRam.Size = new System.Drawing.Size(207, 30);
-            this.lblRam.TabIndex = 19;
-            this.lblRam.Text = "System Informations:";
-            // 
-            // lblCpuName
-            // 
-            this.lblCpuName.AutoSize = true;
-            this.lblCpuName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCpuName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCpuName.Location = new System.Drawing.Point(70, 343);
-            this.lblCpuName.Name = "lblCpuName";
-            this.lblCpuName.Size = new System.Drawing.Size(207, 30);
-            this.lblCpuName.TabIndex = 18;
-            this.lblCpuName.Text = "System Informations:";
-            // 
-            // lblCompName
-            // 
-            this.lblCompName.AutoSize = true;
-            this.lblCompName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCompName.Location = new System.Drawing.Point(70, 303);
-            this.lblCompName.Name = "lblCompName";
-            this.lblCompName.Size = new System.Drawing.Size(207, 30);
-            this.lblCompName.TabIndex = 21;
-            this.lblCompName.Text = "System Informations:";
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Enabled = false;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(25, 296);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(42, 42);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 22;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            // 
-            // bunifuImageButton5
-            // 
-            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton5.Enabled = false;
-            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
-            this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(25, 338);
-            this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(42, 42);
-            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton5.TabIndex = 23;
-            this.bunifuImageButton5.TabStop = false;
-            this.bunifuImageButton5.Zoom = 10;
-            // 
-            // bunifuImageButton6
-            // 
-            this.bunifuImageButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton6.Enabled = false;
-            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
-            this.bunifuImageButton6.ImageActive = null;
-            this.bunifuImageButton6.Location = new System.Drawing.Point(25, 378);
-            this.bunifuImageButton6.Name = "bunifuImageButton6";
-            this.bunifuImageButton6.Size = new System.Drawing.Size(42, 42);
-            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton6.TabIndex = 24;
-            this.bunifuImageButton6.TabStop = false;
-            this.bunifuImageButton6.Zoom = 10;
-            // 
-            // bunifuImageButton7
-            // 
-            this.bunifuImageButton7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton7.Enabled = false;
-            this.bunifuImageButton7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.Image")));
-            this.bunifuImageButton7.ImageActive = null;
-            this.bunifuImageButton7.Location = new System.Drawing.Point(25, 420);
-            this.bunifuImageButton7.Name = "bunifuImageButton7";
-            this.bunifuImageButton7.Size = new System.Drawing.Size(42, 42);
-            this.bunifuImageButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton7.TabIndex = 25;
-            this.bunifuImageButton7.TabStop = false;
-            this.bunifuImageButton7.Zoom = 10;
             // 
             // pnlManual
             // 
@@ -762,6 +761,56 @@
             this.lblManualHead.TabIndex = 0;
             this.lblManualHead.Text = "Manual Autopark";
             // 
+            // pnlLoading
+            // 
+            this.pnlLoading.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLoading.BackgroundImage")));
+            this.pnlLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLoading.Controls.Add(this.bunifuCustomLabel6);
+            this.pnlLoading.Controls.Add(this.pbLoading);
+            this.pnlLoading.GradientBottomLeft = System.Drawing.Color.White;
+            this.pnlLoading.GradientBottomRight = System.Drawing.Color.White;
+            this.pnlLoading.GradientTopLeft = System.Drawing.Color.White;
+            this.pnlLoading.GradientTopRight = System.Drawing.Color.White;
+            this.pnlLoading.Location = new System.Drawing.Point(12, 70);
+            this.pnlLoading.Name = "pnlLoading";
+            this.pnlLoading.Quality = 10;
+            this.pnlLoading.Size = new System.Drawing.Size(776, 393);
+            this.pnlLoading.TabIndex = 26;
+            // 
+            // pbLoading
+            // 
+            this.pbLoading.animated = false;
+            this.pbLoading.animationIterval = 5;
+            this.pbLoading.animationSpeed = 300;
+            this.pbLoading.BackColor = System.Drawing.Color.White;
+            this.pbLoading.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbLoading.BackgroundImage")));
+            this.pbLoading.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.pbLoading.ForeColor = System.Drawing.Color.SeaGreen;
+            this.pbLoading.LabelVisible = true;
+            this.pbLoading.LineProgressThickness = 8;
+            this.pbLoading.LineThickness = 5;
+            this.pbLoading.Location = new System.Drawing.Point(259, 54);
+            this.pbLoading.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.pbLoading.MaxValue = 100;
+            this.pbLoading.Name = "pbLoading";
+            this.pbLoading.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.pbLoading.ProgressColor = System.Drawing.Color.SeaGreen;
+            this.pbLoading.Size = new System.Drawing.Size(231, 231);
+            this.pbLoading.TabIndex = 0;
+            this.pbLoading.Value = 0;
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(242, 282);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(286, 37);
+            this.bunifuCustomLabel6.TabIndex = 27;
+            this.bunifuCustomLabel6.Text = "Sonuçlar Hazırlanıyor...";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -785,10 +834,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.pnlTest.ResumeLayout(false);
             this.pnlTest.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             this.pnlManual.ResumeLayout(false);
             this.pnlManual.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTest)).EndInit();
@@ -796,6 +845,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.pnlLoading.ResumeLayout(false);
+            this.pnlLoading.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -823,8 +874,8 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel lblOneTime;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblFiveMins;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblFiveSecs;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblOneQuantity;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         private Bunifu.Framework.UI.BunifuCustomLabel lblQuantity;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
@@ -854,6 +905,9 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblManualHead;
+        private Bunifu.Framework.UI.BunifuGradientPanel pnlLoading;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private Bunifu.Framework.UI.BunifuCircleProgressbar pbLoading;
 
     }
 }

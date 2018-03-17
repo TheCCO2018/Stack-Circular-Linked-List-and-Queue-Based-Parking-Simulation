@@ -74,29 +74,6 @@ namespace AutoparkProjectHomework_2
                 ilistBasement.Images.Add((_Autopark.Basement.Data[i].id).ToString(), Image.FromFile(_Autopark.Basement.Data[i].imageUrl));
             }
         }
-        public void FakeData()
-        {
-            _Autopark = new Autopark(st, que, LL);
-            Random r = new Random();
-            Car C;
-            Node n;
-            for (int i = 0; i < st.size; i++)
-            {
-                C = new Car() { id = i, carType = 2 };
-                n = new Node() { Data = C };
-                _Autopark.SecondFlat.InsertLast(n);
-            }
-            for (int i = 0; i < st.size; i++)
-            {
-                C = new Car() { id = i + 15, carType = 1 };
-                _Autopark.FirstFlat.Insert(C);
-            }
-            for (int i = 0; i < st.size; i++)
-            {
-                C = new Car() { id = i + 30, carType = 3 };
-                _Autopark.Basement.Push(C);
-            }
-        }
 
         private void btnCikar_Click(object sender, EventArgs e)
         {
@@ -159,33 +136,69 @@ namespace AutoparkProjectHomework_2
         {
             _Autopark.SecondFlat.interval = Convert.ToInt32(dpdSelection.selectedValue);
         }
-
+        Autopark TestedPark;
         private void btnTest_Click(object sender, EventArgs e)
         {
             pnlWelcome.Visible = false;
             pnlManual.Visible = false;
-            pnlTest.Visible = true;
             btnEmptyNotification.Visible = false;
+            pnlTest.Visible = true;
             pnlTest.BringToFront();
+            pbLoading.Value = 1;
+            TestedPark = new Autopark(new Stack(15), new Queue(15), new LinkedList());
+            pbLoading.Value = 15;
+            FakeData(TestedPark);
+            pbLoading.Value = 35;
             lblCompName.Text = HardwareInfo.GetComputerName();
+            pbLoading.Value = 45;
             lblCpuName.Text = HardwareInfo.GetCPUManufacturer();
+            pbLoading.Value = 55;
             lblRam.Text = HardwareInfo.GetPhysicalMemory();
+            pbLoading.Value = 65;
             lblOS.Text = HardwareInfo.GetOSInformation();
+            pbLoading.Value = 75;
             lblOneTime.Text = ((int)TestEt()).ToString();
-            lblFiveMins.Text = "300.000";
-            lblQuantity.Text = ((int)(300000 / TestEt())).ToString()+"x";
-          
+            pbLoading.Value = 85;
+            lblFiveSecs.Text = "5.000";
+            pbLoading.Value = 95;
+            lblQuantity.Text = ((int)(5000 / TestEt())).ToString()+"x";
+            pbLoading.Value = 99;
+            lblOneQuantity.Text = "1x";
+            pbLoading.Value = 100;
+            pnlLoading.Visible = false;         
         }
         public double TestEt()
         {
             DateTime start = DateTime.Now;
-            while ((_Autopark.FirstFlat.isEmpty() && _Autopark.SecondFlat.isEmpty() && _Autopark.Basement.isEmpty()) != true)
+            while ((TestedPark.FirstFlat.isEmpty() && TestedPark.SecondFlat.isEmpty() && TestedPark.Basement.isEmpty()) != true)
             {
-                _Autopark.deleteCar();
+                TestedPark.deleteCar();
             }
             DateTime stop = DateTime.Now;
-            FakeData();
+            FakeData(TestedPark);
             return stop.Subtract(start).TotalMilliseconds;
+        }
+        public void FakeData(Autopark _Park)
+        {
+            Random r = new Random();
+            Car C;
+            Node n;
+            for (int i = 0; i < st.size; i++)
+            {
+                C = new Car() { id = i, carType = 2 };
+                n = new Node() { Data = C };
+                _Park.SecondFlat.InsertLast(n);
+            }
+            for (int i = 0; i < st.size; i++)
+            {
+                C = new Car() { id = i + 15, carType = 1 };
+                _Park.FirstFlat.Insert(C);
+            }
+            for (int i = 0; i < st.size; i++)
+            {
+                C = new Car() { id = i + 30, carType = 3 };
+                _Park.Basement.Push(C);
+            }
         }
     }
 }

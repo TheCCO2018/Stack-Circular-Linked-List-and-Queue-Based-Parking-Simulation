@@ -44,22 +44,5 @@ namespace AutoparkProjectHomework_2
         {
             return top == -1 ? true : false;
         }
-        public override string ValueOf()
-        {
-            string temp = "";
-            for (int i = 0; i < count; i++)
-            {
-                if (Data[i] != null)
-                {
-                    temp += Data[i].carType + "-";
-                }
-            }
-            if(count == 0)
-            {
-                temp = "Bu kat Boştur.";
-            }
-            return temp;
-
-         }
     }
 }

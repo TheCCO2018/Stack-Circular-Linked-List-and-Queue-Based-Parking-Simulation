@@ -70,11 +70,10 @@ namespace AutoparkProjectHomework_2
             {
                 front = N;
                 rear = N;
-                rear.Next = front;// TODO - Dikkat
+                rear.Next = front;
             }
             else
             {
-               
                 rear.Next = N;
                 N.Next = front;
                 rear = N;
@@ -129,25 +128,6 @@ namespace AutoparkProjectHomework_2
         public bool isEmpty()
         {
             return (count == 0) ? true : false;
-        }
-        public string ValueOf()
-        {
-            string temp = "";
-            Node last = front;
-            if(count>0)
-            {
-                while(last.Next != front )
-                {
-                    temp += last.Data.id+"-";
-                    last = last.Next;
-                }
-                temp += rear.Data.id;
-            }
-            else
-            {
-                temp += "Bu kat boştur.";
-            }
-            return temp;
         }
     }
 }

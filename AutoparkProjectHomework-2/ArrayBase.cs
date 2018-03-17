@@ -16,6 +16,5 @@ namespace AutoparkProjectHomework_2
             this.size = size;
             Data = new Car[size];
         }
-        public abstract string ValueOf();
     }
 }

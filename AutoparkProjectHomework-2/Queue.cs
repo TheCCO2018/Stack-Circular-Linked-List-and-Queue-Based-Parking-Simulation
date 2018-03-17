@@ -84,22 +84,5 @@ namespace AutoparkProjectHomework_2
         {
             return (count == 0) ? true : false;
         }
-        public override string ValueOf()
-        {
-            string temp = "";
-            if (isEmpty())
-            {
-                temp = "Bu kat boştur.";
-            }
-            else
-            {
-                    for (int i = 0; i < size; i++)
-                    {
-                        if(this.Data[i] != null)
-                        temp += Data[i].id + "-";
-                    }
-            }
-            return temp;    
-        }
     }
 }
