@@ -92,13 +92,9 @@ namespace AutoparkProjectHomework_2
             Node temp = null;
             if(removeDataindex == 0)
             {
-                front = front.Next;
                 temp = front;
-                rear.Next = front;
-                if (count == 1)
-                {
-                    front = null;
-                }
+                front = front.Next;
+                rear.Next = front;          
                 count--;
                 return temp;
             }

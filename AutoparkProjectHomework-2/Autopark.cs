@@ -42,13 +42,14 @@ namespace AutoparkProjectHomework_2
                         FirstFlat.Remove();
                         FirstFlat.Insert(Basement.Pop());
                 }
-                if(flat == false && !SecondFlat.isEmpty())
+                else if(flat == false && !SecondFlat.isEmpty())
                 {
                         FirstFlat.Remove();
                         FirstFlat.Insert(SecondFlat.Remove().Data);                    
                 }
-                if(Basement.isEmpty() && SecondFlat.isEmpty())
+                else
                 {
+                    if (Basement.isEmpty() && SecondFlat.isEmpty())
                     this.FirstFlat.Remove();
                 }
             }

@@ -16,12 +16,10 @@ namespace AutoparkProjectHomework_2
         public MainForm()
         {
             InitializeComponent();
-           
+            pnlWelcome.Visible = true;
+            pnlWelcome.BringToFront();           
         }
         Autopark _Autopark;
-        LinkedList LL = new LinkedList();
-        Stack st = new Stack(15);
-        Queue que = new Queue(15);
         public void Listele()
         {
             this.lvwSecondFlat.Items.Clear();
@@ -48,26 +46,27 @@ namespace AutoparkProjectHomework_2
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            pnlManual.Visible = false;
-            pnlTest.Visible = false;
-            _Autopark = new Autopark(st, que, LL);
+            ilistBasement.Images.Clear();
+            ilistFirstFlat.Images.Clear();
+            ilistSecondFlat.Images.Clear();
+            _Autopark = new Autopark(new Stack(15), new Queue(15), new LinkedList());
             Random r = new Random();
             Car C;
             Node n;
-            for (int i = 0; i < st.size; i++)
+            for (int i = 0; i < _Autopark.Basement.size; i++)
             {
-                C = new Car() { id = i, carType = 2 };
+                C = new Car() { id = i, carType = r.Next(1,14) };
                 n = new Node() { Data = C };
                 _Autopark.SecondFlat.InsertLast(n);
                 ilistSecondFlat.Images.Add((n.Data.id).ToString(), Image.FromFile(n.Data.imageUrl));
             }
-            for (int i = 0; i < st.size; i++)
+            for (int i = 0; i < _Autopark.Basement.size; i++)
             {
                 C = new Car() { id = i + 15, carType = 1 };
                 _Autopark.FirstFlat.Insert(C);
                 ilistFirstFlat.Images.Add((_Autopark.FirstFlat.Data[i].id).ToString(), Image.FromFile(_Autopark.FirstFlat.Data[i].imageUrl));
             }
-            for (int i = 0; i < st.size; i++)
+            for (int i = 0; i < _Autopark.Basement.size; i++)
             {
                 C = new Car() { id = i + 30, carType = 3 };
                 _Autopark.Basement.Push(C);
@@ -77,20 +76,34 @@ namespace AutoparkProjectHomework_2
 
         private void btnCikar_Click(object sender, EventArgs e)
         {
-            ilistFirstFlat.Images.RemoveByKey(_Autopark.FirstFlat.Data[_Autopark.FirstFlat.front].id.ToString());
+            // show the informations
+            pnlInformations.Visible = true;
+
+            // First Flat Operations inorder: show the picture of leaving car, show the information label, remove the image from list
+            int imageIndex = ilistFirstFlat.Images.IndexOfKey(_Autopark.FirstFlat.Data[_Autopark.FirstFlat.front].id.ToString());
+            if( imageIndex != -1)
+            {
+                picLeavingCar.BackgroundImage = ilistFirstFlat.Images[imageIndex];
+                lblLeavingCarInfo.Text = "45 CCO " + _Autopark.FirstFlat.Peek().id + " left the car park.";
+            }
+            ilistFirstFlat.Images.RemoveByKey(_Autopark.FirstFlat.Peek().id.ToString());
+
+            // Let the front car left the car park.
             _Autopark.deleteCar();
             if (!_Autopark.FirstFlat.isEmpty())
             {
+                // ** ImageList-ListView Operations  **
                 int deletedCarId = _Autopark.FirstFlat.Data[_Autopark.FirstFlat.rear].id;
-                if (deletedCarId < 15)
+                if (deletedCarId < 15 ||deletedCarId == 0)
                 {
-                    int imageIndex = ilistSecondFlat.Images.IndexOfKey(deletedCarId.ToString());
+                    imageIndex = ilistSecondFlat.Images.IndexOfKey(deletedCarId.ToString());
                     if(imageIndex != -1)
                     {
                         ilistFirstFlat.Images.Add(deletedCarId.ToString(),ilistSecondFlat.Images[imageIndex]);
+                        picQueuedCar.BackgroundImage = ilistSecondFlat.Images[imageIndex];
                         ilistSecondFlat.Images.RemoveByKey(deletedCarId.ToString());
                     }
-                    else
+                    if(ilistSecondFlat.Images.Empty)
                     {
                         lvwSecondFlat.Visible = false;
                     }
@@ -98,20 +111,24 @@ namespace AutoparkProjectHomework_2
                 }
                 if (deletedCarId > 29)
                 {
-                    int imageIndex = ilistBasement.Images.IndexOfKey(deletedCarId.ToString());
+                    imageIndex = ilistBasement.Images.IndexOfKey(deletedCarId.ToString());
                     if(imageIndex != -1)
                     {
                         ilistFirstFlat.Images.Add(deletedCarId.ToString(), ilistBasement.Images[imageIndex]);
+                        picQueuedCar.BackgroundImage = ilistBasement.Images[imageIndex];
                         ilistBasement.Images.RemoveByKey(deletedCarId.ToString());
                     }
-                    else
+                    if(ilistBasement.Images.Empty)
                     {
                         lvwBasement.Visible = false;
                     }
                 }
+                lblInlinedCarInfo.Visible = true;
+                lblInlinedCarInfo.Text = "45 CCO " +_Autopark.FirstFlat.Data[_Autopark.FirstFlat.rear].id + " added to 1. Flat.";
             }
             else
             {
+                pnlInformations.Visible = false;
                 btnEmptyNotification.Visible = true;
                 btnCikar.Visible = false;
                 lvwFirstFlat.Visible = false;
@@ -126,9 +143,17 @@ namespace AutoparkProjectHomework_2
 
         private void btnBasla_Click(object sender, EventArgs e)
         {
-            pnlWelcome.Visible = false;
+            pnlTest.Visible = false;
+            pnlInformations.Visible = false;
             pnlManual.Visible = true;
+            lblHeader.Visible = true;
+            lblHeader.Text = "Manual Autopark";
             pnlManual.BringToFront();
+            if (btnEmptyNotification.Visible == true || _Autopark.Basement.count < _Autopark.Basement.size || _Autopark.SecondFlat.count < _Autopark.Basement.size)
+            {
+                _Autopark = new Autopark(new Stack(15), new Queue(15), new LinkedList());
+                Form1_Load(this, null);
+            }
             Listele();
         }
 
@@ -139,6 +164,7 @@ namespace AutoparkProjectHomework_2
         Autopark TestedPark;
         private void btnTest_Click(object sender, EventArgs e)
         {
+            lblHeader.Text = "Automated Autopark";
             pnlWelcome.Visible = false;
             pnlManual.Visible = false;
             btnEmptyNotification.Visible = false;
@@ -183,18 +209,18 @@ namespace AutoparkProjectHomework_2
             Random r = new Random();
             Car C;
             Node n;
-            for (int i = 0; i < st.size; i++)
+            for (int i = 0; i < _Park.Basement.size; i++)
             {
                 C = new Car() { id = i, carType = 2 };
                 n = new Node() { Data = C };
                 _Park.SecondFlat.InsertLast(n);
             }
-            for (int i = 0; i < st.size; i++)
+            for (int i = 0; i < _Park.Basement.size; i++)
             {
                 C = new Car() { id = i + 15, carType = 1 };
                 _Park.FirstFlat.Insert(C);
             }
-            for (int i = 0; i < st.size; i++)
+            for (int i = 0; i < _Park.Basement.size; i++)
             {
                 C = new Car() { id = i + 30, carType = 3 };
                 _Park.Basement.Push(C);
