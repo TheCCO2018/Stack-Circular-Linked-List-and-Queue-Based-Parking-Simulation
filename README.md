@@ -11,7 +11,7 @@ For Now:
 <a href="https://drive.google.com/open?id=12CB5WA7dnSp0xOHACvEt9xK5Qu_4Lcyw">Report in Turkish</a>
 
 # Özet
-Şuan kullanmakta olduğunuz bu promgram, Veri Yapıları dersi için Canberk ATEŞ, Cengiz CEBECİ ve Onat AKTAŞ tarafından
+Şuan kullanmakta olduğunuz bu program, Veri Yapıları dersi için Canberk ATEŞ, Cengiz CEBECİ ve Onat AKTAŞ tarafından
 geliştirilmiştir. Bu program karmaşık veri yapılarında tutulan verilerin kendileri ve birbirleri ile olan ilişkilerini gözlemlemek
 sahip oldukları veri yapısının özelliklerine sadık kalan işlemler dizisi gerçekleştirmektedir. Tüm bu işlemler ödev içeriği 
 gereğince bir Otopark alan adı altında somutlaştırılmıştır.
