@@ -9,6 +9,8 @@ in orderly and non-pipelined in 5 seconds. All of these processes collected and 
 
 For Now: 
 <a href="https://drive.google.com/open?id=12CB5WA7dnSp0xOHACvEt9xK5Qu_4Lcyw">Report in Turkish</a>
+For Game:
+<a href="https://goo.gl/nXs73e">Download Game</a>
 
 # Özet
 Şuan kullanmakta olduğunuz bu program, Veri Yapıları dersi için Canberk ATEŞ, Cengiz CEBECİ ve Onat AKTAŞ tarafından
@@ -17,3 +19,5 @@ sahip oldukları veri yapısının özelliklerine sadık kalan işlemler dizisi 
 gereğince bir Otopark alan adı altında somutlaştırılmıştır.
 
 <a href="https://drive.google.com/open?id=12CB5WA7dnSp0xOHACvEt9xK5Qu_4Lcyw">Rapor</a>
+<a href="https://goo.gl/nXs73e">Oyunu Indir</a>
+
